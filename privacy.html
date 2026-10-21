@@ -1,60 +1,280 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VidéaPilot — Politique de confidentialité</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Politique de confidentialité de VidéaPilot : données personnelles, connexion TikTok et droits des utilisateurs.">
+  <title>Politique de confidentialité | VidéaPilot</title>
+  <link rel="icon" type="image/png" href="/Videapilote-logo.png">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f8fc;
+      color: #243247;
+      line-height: 1.7;
+    }
+    header {
+      background: #102747;
+      padding: 22px;
+      text-align: center;
+    }
+    header img {
+      max-width: 180px;
+      max-height: 100px;
+      object-fit: contain;
+    }
+    main {
+      max-width: 850px;
+      margin: 35px auto;
+      padding: 35px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 5px 25px rgba(0,0,0,.06);
+    }
+    h1, h2 { color: #102747; }
+    h1 { line-height: 1.3; }
+    h2 { margin-top: 30px; }
+    a { color: #087ac4; }
+    footer {
+      padding: 25px;
+      text-align: center;
+    }
+    @media(max-width: 600px) {
+      main { margin: 15px; padding: 22px; }
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <a href="/">
+      <img src="/Videapilote-logo.png" alt="Logo officiel VidéaPilot">
+    </a>
+  </header>
 
-<h1>Politique de confidentialité</h1>
+  <main>
+    <h1>Politique de confidentialité</h1>
+    <p><strong>VidéaPilot</strong> — Dernière mise à jour : 21 octobre 2026</p>
 
-<p>
-VidéaPilot respecte la confidentialité des utilisateurs et traite les données
-uniquement dans le cadre nécessaire au fonctionnement de ses services.
-</p>
+    <h2>1. Responsable du traitement</h2>
+    <p>
+      Le service VidéaPilot est exploité par
+      <strong>Désert Jean-Noël</strong>.
+    </p>
+    <p>
+      Site officiel :
+      <a href="https://videapilot.fr/">https://videapilot.fr/</a>
+    </p>
+    <p>
+      Contact pour toute question relative aux données personnelles :
+      <a href="mailto:contact@videapilot.fr">contact@videapilot.fr</a>
+    </p>
 
-<h2>Données traitées</h2>
+    <h2>2. Présentation du service</h2>
+    <p>
+      VidéaPilot est un projet de service numérique destiné à faciliter
+      la préparation et, à terme, la gestion de contenus pour les réseaux
+      sociaux.
+    </p>
+    <p>
+      La connexion TikTok actuellement proposée permet de tester
+      l'autorisation de connexion à un compte TikTok. Cette démonstration
+      ne constitue pas encore un service opérationnel de publication
+      automatique de vidéos.
+    </p>
 
-<p>
-Selon les fonctionnalités utilisées, VidéaPilot peut traiter les informations
-nécessaires à l'authentification, à la préparation du contenu et à sa
-publication sur les plateformes autorisées par l'utilisateur.
-</p>
+    <h2>3. Données susceptibles d'être traitées</h2>
+    <p>
+      Selon votre utilisation du site, les catégories de données
+      suivantes peuvent être traitées :
+    </p>
+    <ul>
+      <li>
+        Les informations techniques nécessaires au fonctionnement
+        du site et du serveur, telles que l'adresse IP et les
+        informations de requête.
+      </li>
+      <li>
+        Un identifiant temporaire de sécurité utilisé pendant
+        la procédure de connexion TikTok.
+      </li>
+      <li>
+        Le code d'autorisation transmis par TikTok et le jeton
+        d'accès reçu par le serveur lors de l'authentification.
+      </li>
+      <li>
+        Les informations que vous communiquez volontairement
+        par courrier électronique.
+      </li>
+    </ul>
+    <p>
+      Dans la version actuelle du service, VidéaPilot ne récupère
+      pas de profil TikTok par un appel dédié à l'API et ne conserve
+      pas les jetons TikTok dans une base de données applicative.
+    </p>
 
-<h2>Utilisation des données</h2>
+    <h2>4. Finalités et bases juridiques</h2>
+    <p>Les données sont traitées pour :</p>
+    <ul>
+      <li>
+        Assurer le fonctionnement technique et la sécurité du site,
+        sur la base de l'intérêt légitime à fournir un service sécurisé.
+      </li>
+      <li>
+        Exécuter la procédure de connexion TikTok que vous déclenchez
+        volontairement, afin de fournir la fonctionnalité demandée.
+      </li>
+      <li>
+        Répondre à vos demandes envoyées par e-mail, sur la base
+        de l'intérêt légitime à gérer les échanges avec les utilisateurs
+        ou, selon leur objet, de mesures précontractuelles.
+      </li>
+    </ul>
 
-<p>
-Les données sont utilisées uniquement pour fournir les fonctionnalités
-demandées par l'utilisateur et assurer le fonctionnement du service.
-</p>
+    <h2>5. Connexion avec TikTok</h2>
+    <p>
+      Lorsque vous cliquez sur le bouton de connexion TikTok,
+      vous êtes redirigé vers TikTok afin d'autoriser l'accès demandé.
+      L'autorisation actuellement demandée est
+      <strong>user.info.basic</strong>.
+    </p>
+    <p>
+      TikTok transmet ensuite un code d'autorisation au serveur
+      VidéaPilot. Ce code est échangé contre un jeton d'accès.
+      Dans la démonstration actuelle, ce jeton n'est pas
+      enregistré dans une base de données ni envoyé au navigateur.
+    </p>
+    <p>
+      Vous pouvez gérer les autorisations accordées aux applications
+      depuis les paramètres de votre compte TikTok.
+      Les traitements réalisés directement par TikTok relèvent
+      également de sa propre politique de confidentialité.
+    </p>
 
-<h2>Services tiers</h2>
+    <h2>6. Hébergement et destinataires</h2>
+    <p>
+      Le site est publié au moyen de GitHub Pages et le serveur
+      de connexion TikTok est hébergé sur Render.
+      Ces prestataires peuvent traiter des données techniques
+      nécessaires à l'hébergement, au fonctionnement et à la
+      sécurité de leurs services.
+    </p>
+    <p>
+      Les informations nécessaires à l'authentification sont
+      également échangées avec TikTok lorsque vous choisissez
+      de vous connecter.
+    </p>
+    <p>
+      Selon les services et infrastructures utilisés par ces
+      prestataires, des traitements ou transferts internationaux
+      de données peuvent avoir lieu, dans le cadre des garanties
+      applicables prévues par la réglementation.
+    </p>
 
-<p>
-Lorsque l'utilisateur connecte un service tiers, les données sont traitées
-conformément aux autorisations accordées et aux politiques applicables
-du service concerné.
-</p>
+    <h2>7. Durée de conservation</h2>
+    <p>
+      Le cookie temporaire de sécurité utilisé pour la connexion
+      TikTok est configuré pour une durée maximale de dix minutes
+      et fait l'objet d'une demande de suppression à la fin
+      de la procédure de connexion.
+    </p>
+    <p>
+      Les jetons TikTok reçus pendant la démonstration ne sont
+      pas enregistrés dans une base de données applicative.
+      Des données techniques peuvent toutefois figurer dans
+      les journaux des prestataires d'hébergement, selon leurs
+      propres durées de conservation.
+    </p>
+    <p>
+      Les e-mails envoyés au contact VidéaPilot sont conservés
+      pendant le temps nécessaire au traitement et au suivi
+      de la demande, puis supprimés lorsqu'ils ne sont plus utiles,
+      sous réserve des obligations légales applicables.
+    </p>
 
-<h2>Sécurité</h2>
+    <h2>8. Cookies</h2>
+    <p>
+      Le serveur utilise un cookie technique temporaire nommé
+      <strong>videapilot_oauth_state</strong> afin de protéger
+      la procédure de connexion TikTok contre certaines
+      tentatives de falsification.
+    </p>
+    <p>
+      Ce cookie est limité à la procédure d'authentification.
+      Il est configuré avec les attributs de sécurité
+      HttpOnly, Secure et SameSite=Lax.
+      Il n'est pas utilisé par VidéaPilot à des fins publicitaires.
+    </p>
+    <p>
+      TikTok peut utiliser ses propres cookies lorsque vous
+      accédez à son service de connexion.
+    </p>
 
-<p>
-VidéaPilot met en œuvre des mesures raisonnables destinées à protéger
-les informations traitées contre les accès non autorisés.
-</p>
+    <h2>9. Sécurité</h2>
+    <p>
+      VidéaPilot utilise une connexion HTTPS et des mécanismes
+      de vérification de l'état de la session d'authentification.
+      Les secrets de connexion TikTok sont gérés côté serveur.
+    </p>
+    <p>
+      Malgré les mesures de protection mises en place,
+      aucun système informatique ne peut garantir une
+      sécurité absolue.
+    </p>
 
-<h2>Contact</h2>
+    <h2>10. Vos droits</h2>
+    <p>
+      Conformément à la réglementation applicable, notamment
+      au Règlement général sur la protection des données (RGPD),
+      vous pouvez, selon les circonstances, demander :
+    </p>
+    <ul>
+      <li>L'accès à vos données personnelles.</li>
+      <li>La rectification de données inexactes.</li>
+      <li>L'effacement de vos données.</li>
+      <li>La limitation ou l'opposition à certains traitements.</li>
+      <li>La portabilité de vos données lorsque ce droit s'applique.</li>
+      <li>Le retrait de votre consentement lorsqu'un traitement repose sur celui-ci.</li>
+    </ul>
+    <p>
+      Pour exercer vos droits, écrivez à
+      <a href="mailto:contact@videapilot.fr">contact@videapilot.fr</a>.
+      Une vérification raisonnable de votre identité pourra être
+      demandée si nécessaire.
+    </p>
+    <p>
+      Vous pouvez également déposer une réclamation auprès de la
+      <a href="https://www.cnil.fr/" target="_blank" rel="noopener noreferrer">
+        Commission nationale de l'informatique et des libertés (CNIL)
+      </a>.
+    </p>
 
-<p>
-Pour toute question concernant cette politique, contactez l'équipe VidéaPilot
-à l'adresse indiquée sur le site officiel.
-</p>
+    <h2>11. Modifications de cette politique</h2>
+    <p>
+      Cette politique pourra évoluer pour tenir compte des
+      nouvelles fonctionnalités de VidéaPilot, de changements
+      techniques ou d'obligations réglementaires.
+      La date de mise à jour sera indiquée sur cette page.
+    </p>
 
-<p>
-<a href="index.html">Retour à VidéaPilot</a>
-</p>
+    <h2>12. Contact</h2>
+    <p>
+      Responsable : <strong>Désert Jean-Noël</strong><br>
+      E-mail :
+      <a href="mailto:contact@videapilot.fr">contact@videapilot.fr</a>
+    </p>
 
+    <p>
+      <a href="/">← Retour à l'accueil</a>
+      |
+      <a href="/terms.html">Conditions d'utilisation</a>
+    </p>
+  </main>
+
+  <footer>
+    © 2026 VidéaPilot — Tous droits réservés.
+  </footer>
 </body>
 </html>
