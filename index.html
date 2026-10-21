@@ -2,55 +2,227 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Découvrez VidéaPilot, son fonctionnement et sa connexion sécurisée à TikTok via Login Kit.">
-  <title>VidéaPilot | Présentation et connexion TikTok</title>
-  <link rel="icon" type="image/png" href="/videapilot-logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VidéaPilot - Création et gestion de vidéos</title>
+
   <style>
-    :root{color-scheme:dark;--bg:#071025;--panel:#111e36;--line:#2a3d59;--text:#f5f9ff;--muted:#b8c8db;--cyan:#4cece9}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}a{color:var(--cyan)}a:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}
-    .wrap{width:min(1100px,calc(100% - 36px));margin:auto}header{border-bottom:1px solid var(--line);background:#08152b}nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:white;font-size:1.25rem;font-weight:800}.brand img{width:52px;height:52px;object-fit:contain;border-radius:12px}.navlinks{display:flex;gap:18px;flex-wrap:wrap}.navlinks a{text-decoration:none;color:var(--text)}
-    .hero{display:grid;grid-template-columns:1.5fr .75fr;gap:45px;align-items:center;padding:78px 0 64px}.eyebrow{color:var(--cyan);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem}h1{font-size:clamp(2.3rem,5vw,4.3rem);line-height:1.13;margin:14px 0 22px}h2{font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.2}p{color:var(--muted)}.lead{font-size:1.15rem;max-width:690px}.logo-hero{width:100%;max-width:350px;border-radius:24px;box-shadow:0 18px 60px #0008}.actions{display:flex;gap:15px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-block;padding:13px 22px;border-radius:10px;text-decoration:none;font-weight:750}.primary{background:var(--cyan);color:#061427}.secondary{border:1px solid #7294b8;color:white}
-    section.content{padding:30px 0 60px}.section-intro{max-width:780px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.card{background:var(--panel);border:1px solid var(--line);padding:25px;border-radius:16px}.card h3{margin:0 0 8px}.card p{margin:0}.notice{border-left:4px solid var(--cyan);padding:18px 22px;background:#12223a;border-radius:8px}.faq{max-width:850px}.faq h3{margin-bottom:3px}.faq p{margin-top:0}footer{border-top:1px solid var(--line);padding:28px 0 40px}footer .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}footer a{margin-right:20px}small{color:var(--muted)}
-    @media(max-width:760px){.hero{grid-template-columns:1fr;padding:48px 0}.logo-hero{max-width:220px}.cards{grid-template-columns:1fr}.navlinks{gap:12px}}
-  </style>
-</head>
-<body>
-<header><nav class="wrap" aria-label="Navigation principale">
-  <a class="brand" href="/"><img src="/videapilot-logo.png" alt="Logo VidéaPilot">VidéaPilot</a>
-  <div class="navlinks"><a href="#presentation">Présentation</a><a href="#fonctionnement">Fonctionnement</a><a href="#questions">Questions fréquentes</a><a href="/privacy.html">Confidentialité</a></div>
-</nav></header>
-<main>
-  <div class="wrap hero" id="presentation">
-    <div><div class="eyebrow">Plateforme web • Connexion TikTok</div>
-      <h1>Découvrez VidéaPilot et connectez votre compte TikTok</h1>
-      <p class="lead">VidéaPilot est un projet de plateforme web consacré à la gestion de contenus vidéo. Son intégration actuelle avec TikTok permet d'autoriser une connexion à votre compte grâce à TikTok Login Kit.</p>
-      <p>Explorez le fonctionnement du service et les informations de confidentialité avant de choisir de vous connecter.</p>
-      <div class="actions"><a class="btn primary" href="https://videapilot-api.onrender.com/auth/tiktok">Connecter mon compte TikTok</a><a class="btn secondary" href="#fonctionnement">Comprendre le fonctionnement</a></div>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f7fb;
+      color: #161823;
+    }
+
+    header {
+      background: #161823;
+      color: white;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 55px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .tiktok-button {
+      display: inline-block;
+      padding: 15px 28px;
+      background: #161823;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 18px rgba(0,0,0,.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .steps {
+     <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VidéaPilot - Création et gestion de vidéos</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f7fb;
+      color: #161823;
+    }
+
+    header {
+      background: #161823;
+      color: white;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 55px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .tiktok-button {
+      display: inline-block;
+      padding: 15px 28px;
+      background: #161823;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 18px rgba(0,0,0,.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .steps {
+  <p>
+    VidéaPilot est une plateforme web permettant de préparer et gérer
+    facilement vos contenus vidéo et de connecter votre compte TikTok.
+  </p>
+
+  <a
+    class="tiktok-button"
+    href="https://videapilot-api.onrender.com/auth/tiktok"
+  >
+    Connecter mon compte TikTok
+  </a>
+</section>
+
+<main class="container">
+
+  <section class="card">
+    <h3>Comment fonctionne VidéaPilot ?</h3>
+
+    <div class="steps">
+
+      <div class="step">
+        <strong>1. Connexion TikTok</strong>
+        <p>
+          Connectez votre compte TikTok de manière sécurisée.
+        </p>
+      </div>
+
+      <div class="step">
+        <strong>2. Préparation</strong>
+        <p>
+          Préparez le contenu vidéo que vous souhaitez envoyer vers TikTok.
+        </p>
+      </div>
+
+      <div class="step">
+        <strong>3. Téléversement</strong>
+        <p>
+          Envoyez votre vidéo vers TikTok afin de poursuivre sa préparation
+          et sa publication.
+        </p>
+      </div>
+
     </div>
-    <img class="logo-hero" src="/videapilot-logo.png" alt="Identité visuelle officielle de VidéaPilot">
-  </div>
-  <section class="content" id="fonctionnement"><div class="wrap">
-    <h2>Comment fonctionne la connexion ?</h2>
-    <p class="section-intro">La connexion utilise le système d'autorisation de TikTok. Vous gardez le contrôle sur la décision d'autoriser ou non l'accès demandé.</p>
-    <div class="cards">
-      <article class="card"><h3>1. Ouvrir VidéaPilot</h3><p>Consultez cette page, la présentation du service et ses documents juridiques sans devoir vous connecter.</p></article>
-      <article class="card"><h3>2. Autoriser sur TikTok</h3><p>Le bouton de connexion vous redirige vers TikTok, qui présente la demande d'autorisation liée à Login Kit.</p></article>
-      <article class="card"><h3>3. Revenir sur le service</h3><p>Après votre choix sur TikTok, vous êtes redirigé vers le parcours de retour de VidéaPilot.</p></article>
-    </div>
-  </div></section>
-  <section class="content"><div class="wrap">
-    <h2>Fonctionnalités et état du service</h2>
-    <div class="notice"><strong>Intégration actuellement disponible :</strong> connexion TikTok via Login Kit avec l'autorisation <code>user.info.basic</code>. La publication automatique, la programmation et le téléversement de vidéos vers TikTok ne sont pas disponibles dans cette version. VidéaPilot ne demande pas actuellement de permission de publication TikTok.</div>
-    <p>Notre objectif est de développer progressivement des outils d'organisation de contenus vidéo. Les fonctionnalités futures seront présentées comme disponibles uniquement après leur mise en service effective.</p>
-  </div></section>
-  <section class="content" id="questions"><div class="wrap faq">
-    <h2>Questions fréquentes</h2>
-    <h3>Faut-il fournir son mot de passe TikTok à VidéaPilot ?</h3><p>Non. La connexion passe par la page d'autorisation officielle de TikTok. Ne communiquez jamais votre mot de passe directement à VidéaPilot.</p>
-    <h3>VidéaPilot publie-t-il déjà mes vidéos ?</h3><p>Non. La fonctionnalité actuellement intégrée à TikTok concerne uniquement la connexion du compte.</p>
-    <h3>Puis-je consulter les informations légales sans me connecter ?</h3><p>Oui. La <a href="/privacy.html">politique de confidentialité</a> et les <a href="/terms.html">conditions d'utilisation</a> sont librement accessibles.</p>
-  </div></section>
+  </section>
+
+  <section class="card">
+    <h3>Connexion sécurisée</h3>
+
+    <p>
+      VidéaPilot utilise l'autorisation TikTok pour permettre aux utilisateurs
+      de connecter leur propre compte. VidéaPilot n'accède qu'aux autorisations
+      accordées par l'utilisateur.
+    </p>
+  </section>
+
 </main>
-<footer><div class="wrap foot"><div><strong>VidéaPilot</strong><p>Projet web de gestion de contenus vidéo.</p><small>© 2026 VidéaPilot</small></div><div><a href="/">Accueil</a><a href="/terms.html">Conditions d'utilisation</a><a href="/privacy.html">Politique de confidentialité</a></div></div></footer>
+
+<footer>
+  <p>© 2026 VidéaPilot</p>
+
+  <a href="terms.html">Conditions d'utilisation</a>
+  <a href="privacy.html">Politique de confidentialité</a>
+</footer>
+
 </body>
 </html>
