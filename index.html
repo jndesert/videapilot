@@ -1,228 +1,348 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VidéaPilot - Création et gestion de vidéos</title>
+  <meta name="description" content="Découvrez VidéaPilot, un projet de plateforme pour simplifier la préparation et la gestion de contenus vidéo pour les réseaux sociaux.">
+  <title>VidéaPilot | Création et gestion de vidéos</title>
+  <link rel="icon" type="image/png" href="/Videapilote-logo.png">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f6f7fb;
-      color: #161823;
+      background: #f5f8fc;
+      color: #233047;
+      line-height: 1.7;
     }
 
     header {
-      background: #161823;
+      background: #102747;
       color: white;
-      padding: 22px 8%;
+      padding: 18px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 28px;
+    .logo {
+      max-width: 180px;
+      max-height: 90px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     .hero {
+      padding: 85px 20px;
       text-align: center;
-      padding: 80px 20px 55px;
+      background: linear-gradient(135deg, #102747, #087ac4);
+      color: white;
     }
 
-    .hero h2 {
-      font-size: 42px;
-      margin-bottom: 15px;
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.2;
+      max-width: 900px;
+      margin: 0 auto 20px;
     }
 
     .hero p {
-      max-width: 700px;
+      max-width: 720px;
       margin: 0 auto 30px;
       font-size: 18px;
-      line-height: 1.6;
-      color: #555;
     }
 
-    .tiktok-button {
+    .button {
       display: inline-block;
       padding: 15px 28px;
-      background: #161823;
-      color: white;
+      background: white;
+      color: #102747;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 9px;
       font-weight: bold;
-      font-size: 17px;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
-      padding: 20px;
+      padding: 55px 20px;
+    }
+
+    h2 {
+      color: #102747;
+      font-size: 29px;
+      line-height: 1.3;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
     }
 
     .card {
       background: white;
-      padding: 30px;
       border-radius: 14px;
-      margin-bottom: 25px;
-      box-shadow: 0 4px 18px rgba(0,0,0,.06);
+      padding: 28px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.06);
     }
 
     .card h3 {
+      color: #087ac4;
       margin-top: 0;
     }
 
-    .steps {
-     <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VidéaPilot - Création et gestion de vidéos</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f6f7fb;
-      color: #161823;
-    }
-
-    header {
-      background: #161823;
-      color: white;
-      padding: 22px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 80px 20px 55px;
-    }
-
-    .hero h2 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto 30px;
-      font-size: 18px;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .tiktok-button {
-      display: inline-block;
-      padding: 15px 28px;
-      background: #161823;
-      color: white;
-      text-decoration: none;
+    .notice {
+      margin-top: 35px;
+      padding: 22px;
+      border-left: 4px solid #087ac4;
+      background: #eaf4fc;
       border-radius: 8px;
-      font-weight: bold;
-      font-size: 17px;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .card {
+    .section-alt {
       background: white;
-      padding: 30px;
-      border-radius: 14px;
-      margin-bottom: 25px;
-      box-shadow: 0 4px 18px rgba(0,0,0,.06);
     }
 
-    .card h3 {
-      margin-top: 0;
+    .section-alt .container {
+      padding-top: 45px;
+      padding-bottom: 45px;
     }
 
-    .steps {
-  <p>
-    VidéaPilot est une plateforme web permettant de préparer et gérer
-    facilement vos contenus vidéo et de connecter votre compte TikTok.
-  </p>
+    a { color: #087ac4; }
 
-  <a
-    class="tiktok-button"
-    href="https://videapilot-api.onrender.com/auth/tiktok"
-  >
-    Connecter mon compte TikTok
-  </a>
-</section>
+    footer {
+      background: #102747;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
 
-<main class="container">
+    footer a {
+      color: white;
+      margin: 0 10px;
+      display: inline-block;
+    }
 
-  <section class="card">
-    <h3>Comment fonctionne VidéaPilot ?</h3>
+    @media (max-width: 600px) {
+      header { justify-content: center; text-align: center; }
+      nav { justify-content: center; }
+      .hero { padding: 60px 20px; }
+    }
+  </style>
+</head>
 
-    <div class="steps">
+<body>
 
-      <div class="step">
-        <strong>1. Connexion TikTok</strong>
-        <p>
-          Connectez votre compte TikTok de manière sécurisée.
-        </p>
-      </div>
+  <header>
+    <a href="/" aria-label="Accueil VidéaPilot">
+      <img
+        src="/Videapilote-logo.png"
+        alt="Logo officiel VidéaPilot"
+        class="logo"
+      >
+    </a>
 
-      <div class="step">
-        <strong>2. Préparation</strong>
-        <p>
-          Préparez le contenu vidéo que vous souhaitez envoyer vers TikTok.
-        </p>
-      </div>
+    <nav aria-label="Navigation principale">
+      <a href="#fonctionnement">Fonctionnement</a>
+      <a href="#connexion">Connexion TikTok</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-      <div class="step">
-        <strong>3. Téléversement</strong>
-        <p>
-          Envoyez votre vidéo vers TikTok afin de poursuivre sa préparation
-          et sa publication.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="card">
-    <h3>Connexion sécurisée</h3>
+  <section class="hero">
+    <h1>Préparez votre avenir dans la création vidéo avec VidéaPilot</h1>
 
     <p>
-      VidéaPilot utilise l'autorisation TikTok pour permettre aux utilisateurs
-      de connecter leur propre compte. VidéaPilot n'accède qu'aux autorisations
-      accordées par l'utilisateur.
+      VidéaPilot est un projet de plateforme conçu pour simplifier
+      la préparation et, à terme, la gestion de contenus vidéo
+      destinés aux réseaux sociaux.
     </p>
+
+    <a class="button" href="#fonctionnement">
+      Découvrir VidéaPilot
+    </a>
   </section>
 
-</main>
+  <main>
+    <section id="fonctionnement" class="container">
+      <div class="intro">
+        <h2>Comment fonctionne VidéaPilot ?</h2>
+        <p>
+          Notre objectif est de réunir progressivement
+          les outils utiles aux créateurs de contenus
+          dans une interface simple et accessible.
+        </p>
+      </div>
 
-<footer>
-  <p>© 2026 VidéaPilot</p>
+      <div class="cards">
+        <article class="card">
+          <h3>1. Connexion TikTok</h3>
+          <p>
+            Autorisez la connexion à votre compte TikTok
+            depuis la page officielle de TikTok.
+            Cette démonstration est actuellement disponible.
+          </p>
+        </article>
 
-  <a href="terms.html">Conditions d'utilisation</a>
-  <a href="privacy.html">Politique de confidentialité</a>
-</footer>
+        <article class="card">
+          <h3>2. Préparation des vidéos</h3>
+          <p>
+            VidéaPilot prévoit des fonctionnalités
+            permettant de préparer et d'organiser
+            les contenus destinés aux réseaux sociaux.
+          </p>
+          <p><strong>Fonctionnalité en développement.</strong></p>
+        </article>
+
+        <article class="card">
+          <h3>3. Gestion des publications</h3>
+          <p>
+            Le projet prévoit également des outils
+            pour accompagner la gestion et la publication
+            des contenus, sous réserve des autorisations
+            des plateformes concernées.
+          </p>
+          <p><strong>Fonctionnalité en développement.</strong></p>
+        </article>
+      </div>
+
+      <div class="notice">
+        <strong>État actuel du service :</strong>
+        VidéaPilot propose une démonstration de connexion TikTok.
+        La publication automatique, la programmation de vidéos
+        et la conservation d'une session TikTok ne sont pas
+        encore disponibles.
+      </div>
+    </section>
+
+    <section id="connexion" class="section-alt">
+      <div class="container">
+        <h2>Connectez votre compte TikTok</h2>
+
+        <p>
+          La connexion s'effectue par le système
+          officiel d'autorisation TikTok.
+          Vous pouvez accepter ou refuser
+          les autorisations proposées.
+        </p>
+
+        <p>
+          VidéaPilot ne vous demande jamais
+          de saisir votre mot de passe TikTok
+          directement sur son site.
+        </p>
+
+        <p>
+          <a
+            class="button"
+            style="background:#102747;color:white;"
+            href="https://videapilot-api.onrender.com/auth/tiktok"
+          >
+            Se connecter avec TikTok
+          </a>
+        </p>
+
+        <p>
+          <small>
+            Cette connexion est une démonstration technique.
+            Elle ne crée pas encore de compte VidéaPilot permanent.
+          </small>
+        </p>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Pourquoi VidéaPilot ?</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Une approche simple</h3>
+          <p>
+            Un projet pensé pour rendre les outils
+            de création vidéo plus faciles à utiliser.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Une connexion autorisée</h3>
+          <p>
+            L'utilisateur garde le contrôle
+            des autorisations qu'il accorde à TikTok.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Un projet évolutif</h3>
+          <p>
+            De nouvelles fonctionnalités pourront être ajoutées
+            au fur et à mesure du développement du service.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section-alt">
+      <div class="container">
+        <h2>Contact et informations</h2>
+
+        <p>
+          VidéaPilot est un projet exploité
+          par <strong>Désert Jean-Noël</strong>.
+        </p>
+
+        <p>
+          Pour toute question concernant le service,
+          la confidentialité ou les conditions d'utilisation :
+        </p>
+
+        <p>
+          <a href="mailto:contact@videapilot.fr">
+            contact@videapilot.fr
+          </a>
+        </p>
+
+        <p>
+          Consultez également notre
+          <a href="/privacy.html">politique de confidentialité</a>
+          et nos
+          <a href="/terms.html">conditions d'utilisation</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 VidéaPilot — Tous droits réservés.</p>
+    <p>
+      <a href="/">Accueil</a>
+      <a href="/privacy.html">Confidentialité</a>
+      <a href="/terms.html">Conditions d'utilisation</a>
+      <a href="mailto:contact@videapilot.fr">Contact</a>
+    </p>
+  </footer>
 
 </body>
 </html>
